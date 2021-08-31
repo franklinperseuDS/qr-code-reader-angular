@@ -1,11 +1,59 @@
+<style>
+    zxing-scanner {
+        height: 200px;
+        width: 300px;
+        border: 2px solid black;
+    }
+    
+    div {
+        top: 10px;
+    }
+    
+    h1 {
+        color: green;
+    }
+    
+    body {
+        padding: 70px 0;
+        align-items: center;
+    }
+</style>
+
 {{ title }}
 
 <h1> Angular works </h1>
+<h2> hi</h2>
+<div *ngIf="showMyContainer">
+    <zxing-scanner (scanSuccess)="onCodeResult($event)"></zxing-scanner>
+</div>
 
-<zxing-scanner (scanSuccess)="onCodeResult($event)"></zxing-scanner>
 
-
-<p>
-    <small>Esse é o resultado <br></small>
-    <strong> {{scanResult}}</strong>
-</p>
+<div>
+    <button (click)="showMyContainer=!showMyContainer">Show/Hide</button>
+</div>
+<div *ngIf="!showMyContainer">
+    <p>
+        <strong>Esse é o resultado : &nbsp;</strong>
+        <strong> {{scanResult}}</strong>
+    </p>
+    <p>
+        <strong>Esse é o resultado : &nbsp;</strong>
+        <strong> {{scanResult}}</strong>
+    </p>
+    <p>
+        <strong>Esse é o resultado : &nbsp;</strong>
+        <strong> {{scanResult}}</strong>
+    </p>
+    <p>
+        <strong>Esse é o resultado : &nbsp;</strong>
+        <strong> {{scanResult}}</strong>
+    </p>
+    <p>
+        <strong>Esse é o resultado : &nbsp;</strong>
+        <strong> {{scanResult}}</strong>
+    </p>
+    <p>
+        <strong>Esse é o resultado : &nbsp;</strong>
+        <strong> {{scanResult}}</strong>
+    </p>
+</div>
