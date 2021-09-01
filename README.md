@@ -1,27 +1,30 @@
-# QrCode
+# QrCode -reader
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.1.
+Esse projeto foi gerado pelo [Angular CLI](https://github.com/angular/angular-cli) version 12.1.1.
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+projeto anteriormente tinha sido construido em html, javascript e usando o instascan para leitura de qr-code
+e foi convertido para angular usando o @zxing/ngx-scanner para a leitura de camera
+além disso utilizei o angular/pwa para transforma-lo 
+consumi esse app através do heroku .
+alguns passos que podem ser seguidos
+ng new myapp
+yes
+css
+acessa a pasta projeto
+ng add @angular/pwa
+verificar se dentro do app.module.js 
+tem o ServiceWorkerModule
+para rodar o projeto
+$ ng build 
+pode tentar rodar com o seguinte comando:
+$ npx serve
+ou então com
+$ cd dist/projeto
+e usando o http-serve comando 
+$ npm i -g http-server   (para importar)
+$ http-server  (para rodar o servidor)
+por padrão o acesso é no : localhost:8080
+link de ajuda : (https://medium.com/ngconf/angular-pwa-install-and-configure-858dd8e9fb07)
+configure angular app to deploy properly o n
+(https://www.javaguides.net/2020/11/how-to-deploy-angular-application-to-heroku.html)
+(https://www.youtube.com/watch?v=HWBSSC7Vbg0)
