@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   
   scanResult: any="";
-  codigoItemHonda: any="";
+  codigoItem: any="";
   quantidade: any="";
   unidadeMedida : any="";
   validade: any="";
@@ -27,7 +27,7 @@ export class AppComponent {
     
     {
       this.scanResult = result;
-      this.codigoItemHonda = result.slice(1, 26);
+      this.codigoItem = result.slice(1, 26);
       this.quantidade = parseInt(result.slice(26, 39));
       this.unidadeMedida = result.slice(39, 41);
       this.validade = result.slice(41, 49);
@@ -46,7 +46,7 @@ export class AppComponent {
 
     cleanCampos(){
       this.scanResult="";
-      this.codigoItemHonda="";
+      this.codigoItem="";
       this.quantidade="";
       this.unidadeMedida ="";
       this.validade="";
