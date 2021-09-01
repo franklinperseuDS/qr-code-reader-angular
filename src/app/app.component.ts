@@ -39,11 +39,25 @@ export class AppComponent {
       this.estoque = parseInt(result.slice(86, 99));
       this.nEtiqueta = result.slice(99, result.length + 1);
 
-      if(result)
-      {
-        this.showMyContainer = false;
-      }
+     
+        this.showMyContainer = !this.showMyContainer;
+     
     }
 
+    cleanCampos(){
+      this.scanResult="";
+      this.codigoItemHonda="";
+      this.quantidade="";
+      this.unidadeMedida ="";
+      this.validade="";
+      this.pedido="";
+      this.tipo="";
+      this.linha="";
+      this.notaFiscal="";
+      this.dataFabricacao ="";
+      this.estoque="";
+      this.nEtiqueta="";
+    }
     
+
 }

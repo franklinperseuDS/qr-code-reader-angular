@@ -27,11 +27,11 @@
     <zxing-scanner (scanSuccess)="onCodeResult($event)"></zxing-scanner>
 </div>
 
-
-<div>
-    <button (click)="showMyContainer=!showMyContainer">Show/Hide</button>
-</div>
 <div *ngIf="!showMyContainer">
+    <div>
+        <button (click)="showMyContainer=!showMyContainer" (click)="cleanCampos()">Show/Hide</button>
+    </div>
+
     <p>
         <strong>Esse é o resultado : &nbsp;</strong>
         <strong> {{codigoItemHonda}}</strong>
