@@ -20,7 +20,7 @@ export class AppComponent {
   estoque: any="";
   nEtiqueta: any="";
   showMyContainer: boolean = true;
-  title = 'qr-code';
+  title = 'Qrcode Reader';
 
 
   onCodeResult(result: string )

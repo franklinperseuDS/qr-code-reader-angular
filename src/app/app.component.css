@@ -1,0 +1,13 @@
+html {
+    background-color: aqua;
+}
+
+zxing-scanner {
+    height: 200px;
+    width: 300px;
+    border: 2px solid rgb(0, 0, 0);
+}
+
+h1 {
+    color: rgba(22, 65, 182, 0.486);
+}

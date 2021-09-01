@@ -1,84 +1,87 @@
-<style>
-    zxing-scanner {
-        height: 200px;
-        width: 300px;
-        border: 2px solid black;
-    }
-    
-    div {
-        top: 10px;
-    }
-    
-    h1 {
-        color: green;
-    }
-    
-    body {
-        padding: 70px 0;
-        align-items: center;
-    }
-</style>
+<!DOCTYPE html>
 
-<h1>{{ title }} </h1>
+<html lang="pt-br">
 
-<h1> Angular works </h1>
-<h2> hi</h2>
-<div *ngIf="showMyContainer">
-    <zxing-scanner (scanSuccess)="onCodeResult($event)"></zxing-scanner>
-</div>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
 
-<div *ngIf="!showMyContainer">
-    <div>
-        <button (click)="showMyContainer=!showMyContainer" (click)="cleanCampos()">Show/Hide</button>
+<body>
+    <span style="color:#002d57; padding-left:0px; padding-right:2px; font-size:45px; font-family:cambria;"> Painel de leitura</span>
+    <div class="col-md-12" *ngIf="showMyContainer">
+        <h1>{{ title }} </h1>
     </div>
 
-    <p>
-        <strong>Esse é o resultado : &nbsp;</strong>
-        <strong> {{codigoItemHonda}}</strong>
-    </p>
-    <p>
-        <strong>Esse é o resultado : &nbsp;</strong>
-        <strong> {{quantidade}}</strong>
-    </p>
-    <p>
-        <strong>Esse é o resultado : &nbsp;</strong>
-        <strong> {{unidadeMedida}}</strong>
-    </p>
-    <p>
-        <strong>Esse é o resultado : &nbsp;</strong>
-        <strong> {{validade}}</strong>
-    </p>
-    <p>
-        <strong>Esse é o resultado : &nbsp;</strong>
-        <strong> {{pedido}}</strong>
-    </p>
-    <p>
-        <strong>Esse é o resultado : &nbsp;</strong>
-        <strong> {{tipo}}</strong>
-    </p>
-    <p>
-        <strong>Esse é o resultado : &nbsp;</strong>
-        <strong> {{linha}}</strong>
-    </p>
-    <p>
-        <strong>Esse é o resultado : &nbsp;</strong>
-        <strong> {{notaFiscal}}</strong>
-    </p>
-    <p>
-        <strong>Esse é o resultado : &nbsp;</strong>
-        <strong> {{dataFabricacao}}</strong>
-    </p>
-    <p>
-        <strong>Esse é o resultado : &nbsp;</strong>
-        <strong> {{estoque}}</strong>
-    </p>
-    <p>
-        <strong>Esse é o resultado : &nbsp;</strong>
-        <strong> {{nEtiqueta}}</strong>
-    </p>
-    <p>
+    <div *ngIf="!showMyContainer">
+        <h1> Aponte a câmera para o QrCode</h1>
+        <zxing-scanner (scanSuccess)="onCodeResult($event)"></zxing-scanner>
+    </div>
+
+    <div *ngIf="showMyContainer">
+        <div>
+            <!-- <button (click)="showMyContainer=!showMyContainer" (click)="cleanCampos()">Show/Hide</button> -->
+            <button type="button" class="btn btn-primary" (click)="showMyContainer=!showMyContainer" (click)="cleanCampos()"> Nova Leitura</button>
+        </div>
+        <div>
+            <div class="form-control">
+                <strong>Código Item : &nbsp;</strong>
+                <strong> {{codigoItemHonda}}</strong>
+            </div>
+            <div class="form-control">
+                <strong>Quantidade: &nbsp;</strong>
+                <strong> {{quantidade}}</strong>
+            </div>
+            <div class="form-control">
+                <strong> Unidade de Medida: &nbsp;</strong>
+                <strong> {{unidadeMedida}}</strong>
+            </div>
+            <div class="form-control">
+                <strong>Validade : &nbsp;</strong>
+                <strong> {{validade}}</strong>
+            </div>
+            <div class="form-control">
+                <strong> Pedido : &nbsp;</strong>
+                <strong> {{pedido}}</strong>
+            </div>
+            <div class="form-control">
+                <strong>  Tipo : &nbsp;</strong>
+                <strong> {{tipo}}</strong>
+            </div>
+            <div class="form-control">
+                <strong> linha
+             : &nbsp;</strong>
+                <strong> {{linha}}</strong>
+            </div>
+            <div class="form-control">
+                <strong> notaFiscal
+            : &nbsp;</strong>
+                <strong> {{notaFiscal}}</strong>
+            </div>
+            <div class="form-control">
+                <strong> dataFabricacao
+             : &nbsp;</strong>
+                <strong> {{dataFabricacao}}</strong>
+            </div>
+            <div class="form-control">
+                <strong>estoque
+            : &nbsp;</strong>
+                <strong> {{estoque}}</strong>
+            </div>
+            <div class="form-control">
+                <strong> nEtiqueta : &nbsp;</strong>
+                <strong> {{nEtiqueta}}</strong>
+            </div>
+            <!-- <p>
         <strong>Esse é o resultado : &nbsp;</strong>
         <strong> {{showMyContainer}}</strong>
-    </p>
+        </p> -->
+        </div>
 
-</div>
+    </div>
+
+</body>
+
+</html>
