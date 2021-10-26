@@ -10,78 +10,82 @@
 </head>
 
 <body>
-    <span style="color:#002d57; padding-left:0px; padding-right:2px; font-size:45px; font-family:cambria;"> Painel de leitura</span>
-    <div class="col-md-12" *ngIf="showMyContainer">
-        <h1>{{ title }} </h1>
-    </div>
-
-    <div *ngIf="!showMyContainer">
-        <h1> Aponte a câmera para o QrCode</h1>
-        <zxing-scanner (scanSuccess)="onCodeResult($event)"></zxing-scanner>
-    </div>
-
-    <div *ngIf="showMyContainer">
-        <div>
-            <!-- <button (click)="showMyContainer=!showMyContainer" (click)="cleanCampos()">Show/Hide</button> -->
-            <button type="button" class="btn btn-primary" (click)="showMyContainer=!showMyContainer" (click)="cleanCampos()"> Nova Leitura</button>
+    <div id=container>
+        <span style="color:#002d57; padding-left:0px; padding-right:2px; font-size:45px; font-family:cambria;"> Painel de leitura</span>
+        <div class="col-md-12" *ngIf="showMyContainer">
+            <h1>{{ title }} </h1>
         </div>
-        <div>
-            <div class="form-control">
-                <strong>Código Item : &nbsp;</strong>
-                <strong> {{codigoItem}}</strong>
+
+        <div *ngIf="!showMyContainer">
+            <h1> Aponte a câmera para o QrCode</h1>
+            <zxing-scanner (scanSuccess)="onCodeResult($event)"></zxing-scanner>
+        </div>
+
+        <div *ngIf="showMyContainer">
+            <div>
+                <!-- <button (click)="showMyContainer=!showMyContainer" (click)="cleanCampos()">Show/Hide</button> -->
+                <button type="button" class="btn btn-primary" (click)="showMyContainer=!showMyContainer" (click)="cleanCampos()"> Nova Leitura</button>
             </div>
-            <div class="form-control">
-                <strong>Quantidade: &nbsp;</strong>
-                <strong> {{quantidade}}</strong>
-            </div>
-            <div class="form-control">
-                <strong> Unidade de Medida: &nbsp;</strong>
-                <strong> {{unidadeMedida}}</strong>
-            </div>
-            <div class="form-control">
-                <strong>Validade : &nbsp;</strong>
-                <strong> {{validade}}</strong>
-            </div>
-            <div class="form-control">
-                <strong> Pedido : &nbsp;</strong>
-                <strong> {{pedido}}</strong>
-            </div>
-            <div class="form-control">
-                <strong>  Tipo : &nbsp;</strong>
-                <strong> {{tipo}}</strong>
-            </div>
-            <div class="form-control">
-                <strong> linha
+            <div>
+                <div class="form-control">
+                    <strong>Código Item : &nbsp;</strong>
+                    <strong> {{codigoItem}}</strong>
+                </div>
+                <div class="form-control">
+                    <strong>Quantidade: &nbsp;</strong>
+                    <strong> {{quantidade}}</strong>
+                </div>
+                <div class="form-control">
+                    <strong> Unidade de Medida: &nbsp;</strong>
+                    <strong> {{unidadeMedida}}</strong>
+                </div>
+                <div class="form-control">
+                    <strong>Validade : &nbsp;</strong>
+                    <strong> {{validade}}</strong>
+                </div>
+                <div class="form-control">
+                    <strong> Pedido : &nbsp;</strong>
+                    <strong> {{pedido}}</strong>
+                </div>
+                <div class="form-control">
+                    <strong>  Tipo : &nbsp;</strong>
+                    <strong> {{tipo}}</strong>
+                </div>
+                <div class="form-control">
+                    <strong> linha
              : &nbsp;</strong>
-                <strong> {{linha}}</strong>
-            </div>
-            <div class="form-control">
-                <strong> notaFiscal
+                    <strong> {{linha}}</strong>
+                </div>
+                <div class="form-control">
+                    <strong> notaFiscal
             : &nbsp;</strong>
-                <strong> {{notaFiscal}}</strong>
-            </div>
-            <div class="form-control">
-                <strong> dataFabricacao
+                    <strong> {{notaFiscal}}</strong>
+                </div>
+                <div class="form-control">
+                    <strong> dataFabricacao
              : &nbsp;</strong>
-                <strong> {{dataFabricacao}}</strong>
-            </div>
-            <div class="form-control">
-                <strong>estoque
+                    <strong> {{dataFabricacao}}</strong>
+                </div>
+                <div class="form-control">
+                    <strong>estoque
             : &nbsp;</strong>
-                <strong> {{estoque}}</strong>
-            </div>
-            <div class="form-control">
-                <strong> nEtiqueta : &nbsp;</strong>
-                <strong> {{nEtiqueta}}</strong>
-            </div>
-            <!-- <p>
+                    <strong> {{estoque}}</strong>
+                </div>
+                <div class="form-control">
+                    <strong> nEtiqueta : &nbsp;</strong>
+                    <strong> {{nEtiqueta}}</strong>
+                </div>
+                <div class="form-control">
+                    erro
+                </div>
+                <!-- <p>
         <strong>Esse é o resultado : &nbsp;</strong>
         <strong> {{showMyContainer}}</strong>
         </p> -->
+            </div>
+
         </div>
-
     </div>
-
 </body>
 
 </html>
